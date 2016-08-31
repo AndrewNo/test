@@ -1,0 +1,9 @@
+CREATE TABLE `post` (
+ `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+ `title` varchar(45) DEFAULT NULL,
+ `content` text,
+ `author` varchar(45) DEFAULT NULL,
+ `dt` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+ `img` varchar(255) DEFAULT NULL,
+ PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=utf8
