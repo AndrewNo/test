@@ -1,0 +1,12 @@
+CREATE TABLE `comment` (
+ `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+ `content` text,
+ `post_id` int(10) unsigned NOT NULL,
+ `author` varchar(45) NOT NULL,
+ `author_id` int(10) unsigned NOT NULL,
+ `dt` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+ `post_id1` int(10) unsigned NOT NULL,
+ PRIMARY KEY (`id`),
+ KEY `fk_comment_post1_idx` (`post_id1`),
+ CONSTRAINT `fk_comment_post1` FOREIGN KEY (`post_id1`) REFERENCES `mydb`.`post` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB DEFAULT CHARSET=utf8
